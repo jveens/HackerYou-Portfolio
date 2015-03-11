@@ -17,8 +17,6 @@
       <p><?php the_field('about'); ?></p>
     </div>
 
-
-
     <?php  // we are going to pull in our latest 4 blog posts ?> 
     <?php  $latestPosts = new WP_Query( array(
     	'post_type' => 'portfolio', 
@@ -34,14 +32,16 @@
             <h5><?php the_field('project_type'); ?></h5>
             <h4><?php the_title(); ?></h4>
             <p><?php the_field('description'); ?></p>
+            <div class="tags">
+              <?php the_terms($post->ID, 'skills', ' ', ' ', ' '); ?>
+            </div>
+            <button class="seeItLive">
+              <a href="<?php the_field('view_it_url') ;?>">View It Live</a>
+            </button>
           </div>
         </div>
-        <div class="workOverlay">
-          
-        </div>
+        <div class="workOverlay"></div>
       </div>
-
-    	
 
 	<?php endwhile; // end custom loop?>
 	<?php wp_reset_postdata(); // return state to normal?>
