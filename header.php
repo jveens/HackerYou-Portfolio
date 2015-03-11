@@ -8,6 +8,7 @@
   <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 
   <?php // Load our CSS ?>
+  <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic|Playfair+Display:400,700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" type="text/css" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
 
   <?php wp_head(); ?>
@@ -15,19 +16,19 @@
 
 
 <body <?php body_class(); ?>>
-<p>editing headper.php</p>
 <header>
-  <div class="container">
-    <h1>
-      <a href="<?php echo home_url( '/' ); ?>" title="<?php bloginfo( 'name', 'display' ); ?>" rel="home">
-        <?php bloginfo( 'name' ); ?>
-      </a>
-    </h1>
-
-    <?php wp_nav_menu( array(
-      'theme_location' => 'primary'
-    )); ?>
-
-  </div> <!-- /.container -->
+  <div class="container fullBackground">
+      <div class="initalCircle">
+        <h6 class="inital">J</h6>
+      </div>
+      <div class="headerText">
+        <h1>Jenny Veens</h1>
+        <h2>Front-End Developer</h2>
+      </div>
+    
+        
+    <div class="overlay angle">
+      </div>
+         </div> <!-- /.container -->
 </header><!--/.header-->
 

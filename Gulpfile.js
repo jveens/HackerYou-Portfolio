@@ -8,17 +8,18 @@ var gulp = require('gulp'),
 gulp.task('default', ['browserSync', 'watch']);
 
 gulp.task('styles', function(){
-	gulp.src('style/*.scss')
+	gulp.src('*.scss')
 		.pipe(sass({
-			"sourcemap=none": true
+			"sourcemap=none": true,
+			errLogToConsole: false
 		}))
 		.pipe(autoprefix('last 2 version'))
-		.pipe(gulp.dest('style/'))
+		.pipe(gulp.dest('.'))
 		.pipe(reload({ stream: true }))
 });
 
 gulp.task('jshint', function(){
-	return gulp.src('scripts/*.js')
+	return gulp.src('js/*.js')
 		.pipe(jshint())
 		.pipe(jshint.reporter('default'))
 		.pipe(reload({ stream: true }))
@@ -32,7 +33,7 @@ gulp.task('browserSync', function(){
 });
 
 gulp.task('watch', function(){
-	gulp.watch('scripts/**/*.js', ['jshint']);
-	gulp.watch('style/**/*.scss', ['styles']);
+	gulp.watch('js/**/*.js', ['jshint']);
+	gulp.watch('**/*.scss', ['styles']);
 	gulp.watch('**/*.php', reload);
 });
