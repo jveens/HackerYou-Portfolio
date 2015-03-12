@@ -24,11 +24,8 @@
       <div class="headerText">
         <h1>Jenny Veens</h1>
         <h2>Front-End Developer</h2>
-      </div>
-    
-        
-    <div class="overlay angle">
-      </div>
-         </div> <!-- /.container -->
+      </div>   
+    <div class="overlay angle"></div>
+  </div> <!-- /.container -->
 </header><!--/.header-->
 

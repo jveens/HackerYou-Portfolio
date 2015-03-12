@@ -260,13 +260,13 @@ header .fullBackground {
   header .fullBackground .overlay.angle {
     height: 160vh;
     width: 150vw;
-    background-color: rgba(88, 100, 218, 0.64);
+    background-color: rgba(88, 100, 218, 0.5);
     -webkit-transform: rotate(50deg) translateX(-500px) translateY(200px);
         -ms-transform: rotate(50deg) translateX(-500px) translateY(200px);
             transform: rotate(50deg) translateX(-500px) translateY(200px);
     top: -5%; }
   header .fullBackground .initalCircle {
-    background-color: #000;
+    background-color: #222;
     position: relative;
     display: inline-block;
     width: 300px;
@@ -303,6 +303,42 @@ header .fullBackground {
       font-size: 3rem;
       font-weight: 200;
       margin-top: 10px; }
+
+/* -------------------------------------------------
+  ABOUT
+  -------------------------------------------------- */
+.about {
+  background-color: cadetblue;
+  text-align: center; }
+  .about p {
+    margin: 0 auto;
+    padding: 20px;
+    font-size: 2rem;
+    width: 50%;
+    font-family: 'Lato', sans-serif;
+    color: #222; }
+
+/* -------------------------------------------------
+  PORTFOLIO
+  -------------------------------------------------- */
+.workContainer {
+  height: 100vh;
+  position: relative;
+  overflow: hidden; }
+  .workContainer .workBg {
+    height: 100vh;
+    background-size: cover; }
+  .workContainer .workOverlay {
+    height: 160vh;
+    width: 150vw;
+    -webkit-transform: rotate(60deg) translateX(-500px) translateY(500px);
+        -ms-transform: rotate(60deg) translateX(-500px) translateY(500px);
+            transform: rotate(60deg) translateX(-500px) translateY(500px);
+    top: -5%;
+    opacity: 0.85; }
+  .workContainer .workText {
+    width: 20%;
+    font-family: 'Lato', sans-serif; }
 
 /* =============================================================================
                   Author Archive

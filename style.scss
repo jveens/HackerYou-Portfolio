@@ -40,12 +40,13 @@ img.alignright    { padding-left: 5px; }
   VARIABLES 
   -------------------------------------------------- */
 
-  $headerOverlay : rgba(88,100,218,0.64);
+  $headerOverlay : rgba(88,100,218,0.5);
   $lato : 'Lato', sans-serif;
   $playfair : 'Playfair Display', serif;
-  $darkest : #000; 
+  $darkest : #222; 
   $lightest: #fff;
   $seethru : rgba(255,255,255,0.3);
+  $aboutBG : rgb(95,158,160);
 
 
 /* =============================================================================
@@ -215,10 +216,57 @@ header {
         font-size: 3rem;
         font-weight: 200;
         margin-top: 10px;
-      };
+      }
     }
   } // end .fullBackground
 }// end of header
+
+/* -------------------------------------------------
+  ABOUT
+  -------------------------------------------------- */
+
+.about {
+  background-color: $aboutBG;
+  text-align: center;
+
+
+  p {
+    margin: 0 auto;
+    padding: 20px;
+    font-size: 2rem;
+    width: 50%;
+    font-family: $lato;
+    color: $darkest;
+  }
+}
+
+/* -------------------------------------------------
+  PORTFOLIO
+  -------------------------------------------------- */
+
+.workContainer {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+
+  .workBg {
+    height: 100vh;
+    background-size: cover;
+  }
+
+  .workOverlay {
+    height: 160vh;
+    width: 150vw;
+    transform: rotate(60deg) translateX(-500px) translateY(500px);
+    top: -5%;
+    opacity: 0.85;
+  }
+
+  .workText {
+    width: 20%;
+    font-family: $lato;
+  }
+}
 
 
 /* =============================================================================

@@ -27,7 +27,7 @@
     <?php if( $latestPosts->have_posts()) while( $latestPosts->have_posts()) : $latestPosts->the_post(); ?>
       
       <div class="workContainer">
-        <div class="workBg" >
+        <div class="workBg" style="background-image:url('<?php the_field('background_image'); ?>')" >
           <div class="workText">
             <h5><?php the_field('project_type'); ?></h5>
             <h4><?php the_title(); ?></h4>
@@ -38,9 +38,9 @@
             <button class="seeItLive">
               <a href="<?php the_field('view_it_url') ;?>">View It Live</a>
             </button>
-          </div>
-        </div>
-        <div class="workOverlay"></div>
+          </div> <!-- end of .workText -->
+          <div class="workOverlay" style="background-color:<?php the_field('overlay_color'); ?>"></div>
+        </div><!-- end of .workBg -->
       </div>
 
 	<?php endwhile; // end custom loop?>

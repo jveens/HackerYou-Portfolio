@@ -11,7 +11,7 @@ gulp.task('styles', function(){
 	gulp.src('*.scss')
 		.pipe(sass({
 			"sourcemap=none": true,
-			errLogToConsole: false
+			errLogToConsole: true
 		}))
 		.pipe(autoprefix('last 2 version'))
 		.pipe(gulp.dest('.'))
