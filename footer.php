@@ -1,9 +1,16 @@
 <footer>
   <div class="container">
-    <p>&copy; HackerYou <?php echo date('Y'); ?></p>
-    <?php wp_nav_menu(array(
+  	  <section class="contact">
+  	    <p>I'd love to join your team!</p>
+  	    <button>
+  	      <a href="#">Say Hello</a>
+  	    </button>
+  	  </section>
+
+    <p class="copy">&copy; Jenny Veens <?php echo date('Y'); ?></p>
+  <!--   <?php wp_nav_menu(array(
     	'theme_location' => 'footer',
-    )); ?>
+    )); ?> -->
   </div>
 </footer>
 

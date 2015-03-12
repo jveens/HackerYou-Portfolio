@@ -46,6 +46,8 @@ img.alignright    { padding-left: 5px; }
   $darkest : #000; 
   $lightest: #ddd;
   $seethru : rgba(255,255,255,0.3);
+  $shadow : rgba(0,0,0,0.3);
+  $footerBg : rgba(74,74,74,1);
   $aboutBG : rgb(95,158,160);
 
 
@@ -63,11 +65,10 @@ html {
   }
 }
 body.single-post {
-  background: mediumturquoise;
+
 }
 
 .container {
-  max-width:1200px;
   margin:0 auto;
 }
 
@@ -220,14 +221,15 @@ header {
   -------------------------------------------------- */
 
 .about {
-  background-color: $aboutBG;
+  background-color: $lightest;
   text-align: center;
+  height: 100vh;
 
 
   p {
     margin: 0 auto;
     padding: 20px;
-    font-size: 2rem;
+    font-size: 2.5rem;
     width: 50%;
     font-family: $lato;
     color: $darkest;
@@ -247,13 +249,27 @@ header {
   .workBg {
     height: 100vh;
     background-size: cover;
+    -webkit-filter: grayscale(40%) blur(3px);
+    transition: all 0.7s;
+
+    &:hover  {
+      -webkit-filter: grayscale(0) blur(0);
+    }
+    &:hover ~ .workOverlay {
+      transform: rotate(60deg) translateX(-900px) translateY(380px);
+    }
+
+
   }
 
   .workOverlay {
     height: 160vh;
     width: 150vw;
-    transform: rotate(60deg) translateX(-500px) translateY(700px);
+    transform: rotate(60deg) translateX(-900px) translateY(200px);
     top: -5%;
+    box-shadow: 0 0 12px 2px $shadow;
+    transition: all 0.7s;
+
   }
 
   .workText {
@@ -261,7 +277,9 @@ header {
     font-family: $lato;
     z-index: 20;
     position: absolute;
-    margin: 100px 70px 0 ;
+    top: 0;
+    left: 5%;
+    margin: 100px 30px 0 ;
 
     h4 {
       font-size: 3.5rem;
@@ -273,7 +291,8 @@ header {
       font-weight: 100;
     }
     p {
-      font-size: 1.3rem;
+      font-size: 1.5rem;
+      line-height: 1.5;
     }
     .tags a {
       font-size: 1.3rem;
@@ -310,6 +329,101 @@ header {
   }
 }
 
+/* -------------------------------------------------
+  PORTFOLIO OUTRO 
+  -------------------------------------------------- */
+
+.viewGallery {
+  clear:both;
+  background: $footerBg;
+  text-align: center;
+  padding: 50px 0 5px;
+  font-family: $lato;
+  
+  button {
+    margin: 20px 0 70px;
+    -webkit-appearance: none;
+    background-color: transparent;
+    border: 2px solid $lightest;
+    padding: 20px;
+    transition: all 0.3s;
+    border-radius: 1px;
+
+    &:hover {
+      background-color: $lightest;
+    }
+
+    &:hover a {
+      color: $footerBg;
+    }
+
+    a {
+      color: $lightest;
+      font-size: 2rem;
+      text-transform: uppercase;
+      transition: all 0.3s;
+    }
+  }
+  p {
+    font-size: 2rem;
+    letter-spacing: 1.2px;
+    color: $lightest;
+  }
+}
+
+/* -------------------------------------------------
+  BLOG SECTION
+  -------------------------------------------------- */
+.blogSection {
+  h4 {
+    text-align: center;
+    font-size: 2rem;
+    text-transform: uppercase;
+  }
+}
+
+.blogPosts {
+  width: 100%;
+
+
+  .postContainer {
+    width: 33.3333%;
+    float: left;
+    position: relative;
+    overflow: hidden;
+
+
+    .imgContainer {
+      width: 100%;
+      display:inline-block;
+      overflow:hidden;
+
+      img {
+        width: 100%;
+        height: auto;
+        transition: all 0.3s;
+        vertical-align:middle;
+
+        &:hover {
+          transform: scale(1.1);
+        }     
+      }
+    }
+
+    .textContainer {
+      position: absolute;
+      top:20%;
+      margin-left: 20px;
+      font-size: 1.5rem;
+      padding-right: 20px;
+      line-height: 1.4;
+      font-family: $lato;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      }
+
+  }
+}
 
 /* =============================================================================
                   Author Archive
@@ -344,15 +458,46 @@ header {
       list-style: none;
     }
 
-
-
-
 /* =============================================================================
                    Footer
    ========================================================================== */
 
 footer {
   clear:both;
+  background: $footerBg;
+  text-align: center;
+  padding: 50px 0 5px;
+  font-family: $lato;
+  
+  button {
+    margin: 20px 0 50px;
+    -webkit-appearance: none;
+    background-color: transparent;
+    border: 2px solid $lightest;
+    padding: 20px;
+    transition: all 0.3s;
+    border-radius: 1px;
+
+    &:hover {
+      background-color: $lightest;
+    }
+
+    &:hover a {
+      color: $footerBg;
+    }
+
+    a {
+      color: $lightest;
+      font-size: 2rem;
+      text-transform: uppercase;
+      transition: all 0.3s;
+    }
+  }
+  p {
+    font-size: 2rem;
+    letter-spacing: 1.2px;
+    color: $lightest;
+  }
 }
 
 
