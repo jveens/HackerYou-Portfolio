@@ -16,16 +16,43 @@
 
 
 <body <?php body_class(); ?>>
-<header>
-  <div class="container fullBackground">
-      <div class="initalCircle">
-        <h6 class="inital">J</h6>
-      </div>
-      <div class="headerText">
-        <h1>Jenny Veens</h1>
-        <h2>Front-End Developer</h2>
-      </div>   
-    <div class="overlay angle"></div>
-  </div> <!-- /.container -->
-</header><!--/.header-->
 
+
+<?php if(is_page('home')) { ?>
+  <header class="mainHeader">
+    <div class="container fullBackground">
+      <nav>
+        <div class="hamburger">☰</div>
+        <?php wp_nav_menu(array(
+              'theme_location' => 'primary',
+            )); ?>
+      </nav>
+        <div class="initalCircle">
+          <h6 class="inital">J</h6>
+        </div>
+        <div class="headerText">
+          <h1>Jenny Veens</h1>
+          <h2>Front-End Developer</h2>
+        </div>   
+      <div class="overlay angle"></div>
+    </div> <!-- /.container -->
+  </header><!--/.header-->
+<?php } else { ?>
+  <header class="singleHeader">
+    <div class="container">
+      <nav>
+        <div class="initalCircle">
+            <h6 class="inital">J</h6>
+        </div>
+      </nav>
+      <div class="headerTitle">
+        <?php the_title(); ?>
+      </div>
+      <div class="entry-meta">
+      <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
+        <?php hackeryou_posted_on(); ?>
+      <?php endwhile; // end of the loop. ?>
+      </div><!-- .entry-meta -->
+    </div>
+  </header>
+<?php } ?>

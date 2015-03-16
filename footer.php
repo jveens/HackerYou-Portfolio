@@ -1,6 +1,6 @@
 <footer>
   <div class="container">
-  	  <section class="contact">
+  	  <section class="contact" id="contact">
   	    <p>I'd love to join your team!</p>
   	    <button>
   	      <a href="#">Say Hello</a>

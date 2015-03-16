@@ -13,8 +13,11 @@
 
 <!-- NEED TO GET THE 'ABOUT' SECTION -->
 
-    <div class="about">
-      <p><?php the_field('about'); ?></p>
+    <div class="about" id="about">
+      <div class="aboutText">
+      <h2>About</h2>
+      <?php the_field('about'); ?>
+      </div>
     </div>
 
     <?php  // we are going to pull in our latest 4 blog posts ?> 
@@ -26,7 +29,7 @@
 
     <?php if( $latestPosts->have_posts()) while( $latestPosts->have_posts()) : $latestPosts->the_post(); ?>
       
-      <div class="workContainer">
+      <div class="workContainer" id="portfolio">
         <div class="workBg" style="background-image:url('<?php the_field('background_image'); ?>')" >
       
         </div><!-- end of .workBg -->
@@ -46,16 +49,15 @@
 	<?php endwhile; // end custom loop?>
 	<?php wp_reset_postdata(); // return state to normal?>
 
-  <!-- VIEW GALLERY -->
-  <div class="viewGallery">
-    <p>Like what you see?</p>
-    <button>
+  <div class="viewGallery" id="blog">
+    <p>On the Blog...</p>
+    <!-- <button>
       <a href="#">View More Here</a>
-    </button>
+    </button> -->
   </div>
   <!-- BLOG SECTION --> 
   <section class="blogSection">
-    <h4>Blog</h4>
+   <!--  <h4>Blog</h4> -->
     <div class="blogPosts clearfix">
 
       <?php 
@@ -72,18 +74,19 @@
           <div class="imgContainer">
             <a href="<?php echo get_permalink( $post->ID )?>">
               <?php echo get_the_post_thumbnail( $post->ID, 'medium'); ?>
+              <div class="textContainer">
+                <h3><?php echo get_the_title( $post->ID ); ?></h3>
+              </div>
             </a>
         </div>
-        <div class="textContainer">
-          <h3><?php echo get_the_title( $post->ID ); ?></h3>
-        </div>
+        
       </div>
           <?php endwhile ?>
           <?php wp_reset_postdata(); ?>
         <?php endif; ?>
 
     </div>
-    <h4><a href="#">View all posts</a></h4>
+    <!-- <h4><a href="#">View all posts</a></h4> -->
   </section>
 
     </div> <!-- /.container -->

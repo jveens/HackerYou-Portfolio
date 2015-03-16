@@ -7,18 +7,7 @@
       <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 
         <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-          <?php 
-            // We create an array of options for our upcoming the_post_thumbnail
-            $attr = array(
-              'class' => 'hackeryou',
-            );
-            the_post_thumbnail('full', $attr); ?>
-          <h1 class="entry-title"><?php the_title(); ?></h1>
-
-          <div class="entry-meta">
-            <?php hackeryou_posted_on(); ?>
-          </div><!-- .entry-meta -->
-
+          
           <div class="entry-content">
             <?php the_content(); ?>
             <?php wp_link_pages(array(
@@ -44,7 +33,6 @@
 
     </div> <!-- /.content -->
 
-    <?php get_sidebar(); ?>
 
   </div> <!-- /.container -->
 </div> <!-- /.main -->
