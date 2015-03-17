@@ -74,12 +74,14 @@
         <?php while ($frontposts->have_posts() ) : $frontposts->the_post() ?>
 
         <div class="postContainer clearfix">
+
           <div class="imgContainer">
             <a href="<?php echo get_permalink( $post->ID )?>">
               <?php echo get_the_post_thumbnail( $post->ID, 'medium'); ?>
               <div class="textContainer">
                 <h3><?php echo get_the_title( $post->ID ); ?></h3>
               </div>
+              <div class="blogOverlay"></div>
             </a>
         </div>
         

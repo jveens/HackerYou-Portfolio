@@ -226,6 +226,7 @@ header.mainHeader {
   background-color: #444;
   color: black;
   padding: 2%;
+  }
 
   .initalCircle {
     background-color: black;
@@ -269,7 +270,6 @@ header.mainHeader {
       color: white;
     }
   }
-}
 
 /* -------------------------------------------------
   ABOUT
@@ -331,7 +331,7 @@ header.mainHeader {
       -webkit-filter: grayscale(0) blur(0);
     }
     &:hover ~ .workOverlay {
-      transform: rotate(70deg) translateX(-900px) translateY(700px);
+      transform: rotate(70deg) translateX(-900px) translateY(600px);
     }
   }
 
@@ -346,7 +346,7 @@ header.mainHeader {
   }
 
   .hovered {
-      transform: rotate(70deg) translateX(-900px) translateY(700px);
+      transform: rotate(70deg) translateX(-900px) translateY(600px);
   }
   .hoveredBg {
     -webkit-filter: grayscale(0) blur(0);
@@ -498,6 +498,18 @@ header.mainHeader {
     float: left;
     position: relative;
     overflow: hidden;
+
+    .blogOverlay {
+      width: 120%;
+      height: 120%;
+      color: coral;
+      opacity: 0.7;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: rotate(45deg);
+      display: block;
+    }
 
 
     .imgContainer {
@@ -720,13 +732,14 @@ header {
    height: 100px;
    transform: rotate(70deg);
    position: absolute;
-   left: 75%;
-   top: 41.5%;
+   left: 73%;
+   top: 42.5%;
    margin: 0;
-   opacity: 0;
    transition: all 0.3s;
+
   h6.little {
    font-size: 5rem;
+
  }
 }
 nav {
@@ -752,7 +765,6 @@ nav {
     position: absolute;
     top: 43.5%;
     left: 63%;
-    opacity: 0;
     transition: all 0.3s;
 
     li {
@@ -778,10 +790,12 @@ nav {
   color: darken($lightest, 20%);
   z-index: 100;
 }
+
 .slideout {
   top: 0%;
   left: -50%;
 }
+
 
 
 

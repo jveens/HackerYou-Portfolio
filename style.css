@@ -304,38 +304,41 @@ header.mainHeader .headerText {
   background-color: #444;
   color: black;
   padding: 2%; }
-  .singleHeader .initalCircle {
-    background-color: black;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    position: relative;
-    padding: 2%; }
-    .singleHeader .initalCircle .inital {
-      color: white;
-      font-family: 'Playfair Display', serif;
-      text-align: center;
-      position: absolute;
-      display: inline;
-      top: 12%;
-      left: 42%;
-      font-size: 3rem;
-      margin: 0; }
-  .singleHeader .headerTitle, .singleHeader .entry-meta {
-    font-size: 4.2rem;
-    font-family: 'Lato', sans-serif;
-    font-weight: 200;
+
+.initalCircle {
+  background-color: black;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  position: relative;
+  padding: 2%; }
+  .initalCircle .inital {
     color: white;
-    letter-spacing: 1.2px;
+    font-family: 'Playfair Display', serif;
     text-align: center;
-    width: 50%;
-    margin: 5% auto 60px; }
-  .singleHeader .entry-meta {
-    font-size: 1.7rem;
-    font-weight: 100;
-    margin-top: 20px; }
-    .singleHeader .entry-meta a {
-      color: white; }
+    position: absolute;
+    display: inline;
+    top: 12%;
+    left: 42%;
+    font-size: 3rem;
+    margin: 0; }
+
+.headerTitle, .entry-meta {
+  font-size: 4.2rem;
+  font-family: 'Lato', sans-serif;
+  font-weight: 200;
+  color: white;
+  letter-spacing: 1.2px;
+  text-align: center;
+  width: 50%;
+  margin: 5% auto 60px; }
+
+.entry-meta {
+  font-size: 1.7rem;
+  font-weight: 100;
+  margin-top: 20px; }
+  .entry-meta a {
+    color: white; }
 
 /* -------------------------------------------------
   ABOUT
@@ -383,9 +386,9 @@ header.mainHeader .headerText {
     .workContainer .workBg:hover {
       -webkit-filter: grayscale(0) blur(0); }
     .workContainer .workBg:hover ~ .workOverlay {
-      -webkit-transform: rotate(70deg) translateX(-900px) translateY(700px);
-          -ms-transform: rotate(70deg) translateX(-900px) translateY(700px);
-              transform: rotate(70deg) translateX(-900px) translateY(700px); }
+      -webkit-transform: rotate(70deg) translateX(-900px) translateY(600px);
+          -ms-transform: rotate(70deg) translateX(-900px) translateY(600px);
+              transform: rotate(70deg) translateX(-900px) translateY(600px); }
   .workContainer .workOverlay {
     height: 160vh;
     width: 150vw;
@@ -398,9 +401,9 @@ header.mainHeader .headerText {
             transition: all 1.2s;
     opacity: 1; }
   .workContainer .hovered {
-    -webkit-transform: rotate(70deg) translateX(-900px) translateY(700px);
-        -ms-transform: rotate(70deg) translateX(-900px) translateY(700px);
-            transform: rotate(70deg) translateX(-900px) translateY(700px); }
+    -webkit-transform: rotate(70deg) translateX(-900px) translateY(600px);
+        -ms-transform: rotate(70deg) translateX(-900px) translateY(600px);
+            transform: rotate(70deg) translateX(-900px) translateY(600px); }
   .workContainer .hoveredBg {
     -webkit-filter: grayscale(0) blur(0); }
   .workContainer .workText {
@@ -515,6 +518,18 @@ header.mainHeader .headerText {
     float: left;
     position: relative;
     overflow: hidden; }
+    .blogPosts .postContainer .blogOverlay {
+      width: 120%;
+      height: 120%;
+      color: coral;
+      opacity: 0.7;
+      position: absolute;
+      top: 0;
+      left: 0;
+      -webkit-transform: rotate(45deg);
+          -ms-transform: rotate(45deg);
+              transform: rotate(45deg);
+      display: block; }
     .blogPosts .postContainer .imgContainer {
       width: 100%;
       display: inline-block;
@@ -685,10 +700,9 @@ header .initalCircle.small {
       -ms-transform: rotate(70deg);
           transform: rotate(70deg);
   position: absolute;
-  left: 75%;
-  top: 41.5%;
+  left: 73%;
+  top: 42.5%;
   margin: 0;
-  opacity: 0;
   -webkit-transition: all 0.3s;
           transition: all 0.3s; }
   header .initalCircle.small h6.little {
@@ -720,7 +734,6 @@ header nav {
     position: absolute;
     top: 43.5%;
     left: 63%;
-    opacity: 0;
     -webkit-transition: all 0.3s;
             transition: all 0.3s; }
     header nav ul li {

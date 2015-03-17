@@ -46,8 +46,8 @@
 <?php } else { ?>
   <header class="singleHeader">
     <div class="container">
+    <div class="hamburger">☰</div>
       <nav>
-        <div class="hamburger">☰</div>
         <a href="http://localhost:3000/portfolio/">
           <div class="initalCircle small">
             <h6 class="inital little">J</h6>
