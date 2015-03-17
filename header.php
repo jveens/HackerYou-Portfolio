@@ -9,6 +9,7 @@
 
   <?php // Load our CSS ?>
   <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic|Playfair+Display:400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   <link rel="stylesheet" type="text/css" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
 
   <?php wp_head(); ?>
@@ -23,6 +24,11 @@
     <div class="container fullBackground">
       <nav>
         <div class="hamburger">☰</div>
+        <a href="#">
+          <div class="initalCircle small">
+            <h6 class="inital little">J</h6>
+          </div>
+        </a>
         <?php wp_nav_menu(array(
               'theme_location' => 'primary',
             )); ?>
@@ -41,9 +47,15 @@
   <header class="singleHeader">
     <div class="container">
       <nav>
-        <div class="initalCircle">
-            <h6 class="inital">J</h6>
-        </div>
+        <div class="hamburger">☰</div>
+        <a href="http://localhost:3000/portfolio/">
+          <div class="initalCircle small">
+            <h6 class="inital little">J</h6>
+          </div>
+        </a>
+        <?php wp_nav_menu(array(
+              'theme_location' => 'primary',
+            )); ?>
       </nav>
       <div class="headerTitle">
         <?php the_title(); ?>

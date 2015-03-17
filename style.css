@@ -238,6 +238,10 @@ pre {
 img.avatar {
   border-radius: 50%; }
 
+.panel-fixed {
+  position: fixed;
+  z-index: 40; }
+
 /* -------------------------------------------------
   HEADER
   -------------------------------------------------- */
@@ -257,6 +261,13 @@ header.mainHeader .fullBackground {
         -ms-transform: rotate(-70deg) translateX(600px) translateY(200px);
             transform: rotate(-70deg) translateX(600px) translateY(200px);
     top: -5%; }
+  header.mainHeader .fullBackground .initalCircle.small {
+    width: 100px;
+    height: 100px;
+    right: -46%; }
+    header.mainHeader .fullBackground .initalCircle.small h6.little {
+      font-size: 5rem;
+      top: 10%; }
   header.mainHeader .fullBackground .initalCircle {
     background-color: #000;
     position: relative;
@@ -287,7 +298,7 @@ header.mainHeader .fullBackground {
     left: 12%; }
     header.mainHeader .fullBackground .headerText h1, header.mainHeader .fullBackground .headerText h2 {
       font-size: 5rem;
-      background-color: rgba(255, 255, 255, 0.4);
+      background-color: rgba(255, 255, 255, 0.5);
       padding: 10px;
       border-radius: 3px;
       margin: 20px 0 0; }
@@ -325,7 +336,7 @@ header.mainHeader .fullBackground {
     letter-spacing: 1.2px;
     text-align: center;
     width: 50%;
-    margin: 0 auto 60px; }
+    margin: 5% auto 60px; }
   .singleHeader .entry-meta {
     font-size: 1.7rem;
     font-weight: 100;
@@ -338,22 +349,30 @@ header.mainHeader .fullBackground {
   -------------------------------------------------- */
 .about {
   background-color: #EAF1F4;
-  text-align: center;
-  padding: 0px 0; }
+  text-align: left;
+  padding: 100px 0;
+  width: 100%; }
   .about .aboutText {
-    padding: 60px; }
+    padding: 60px;
+    width: 60%;
+    float: left; }
   .about h2 {
     font-size: 4rem;
-    margin: 20px;
+    margin: 20px 0 20px 0;
     font-weight: 100; }
   .about p {
-    margin: 0 auto;
-    padding: 20px;
+    margin: 0;
+    padding: 0;
     font-size: 2.5rem;
-    width: 60%;
+    width: 100%;
     font-family: 'Lato', sans-serif;
     color: #000;
     font-weight: 100; }
+  .about .profilePic {
+    width: 25%;
+    float: left;
+    border-radius: 50%;
+    margin: 5% 2% 0 5%; }
 
 /* -------------------------------------------------
   PORTFOLIO
@@ -371,20 +390,26 @@ header.mainHeader .fullBackground {
     .workContainer .workBg:hover {
       -webkit-filter: grayscale(0) blur(0); }
     .workContainer .workBg:hover ~ .workOverlay {
-      -webkit-transform: rotate(70deg) translateX(-900px) translateY(600px);
-          -ms-transform: rotate(70deg) translateX(-900px) translateY(600px);
-              transform: rotate(70deg) translateX(-900px) translateY(600px); }
+      -webkit-transform: rotate(70deg) translateX(-900px) translateY(700px);
+          -ms-transform: rotate(70deg) translateX(-900px) translateY(700px);
+              transform: rotate(70deg) translateX(-900px) translateY(700px); }
   .workContainer .workOverlay {
     height: 160vh;
     width: 150vw;
-    -webkit-transform: rotate(70deg) translateX(-900px) translateY(200px);
-        -ms-transform: rotate(70deg) translateX(-900px) translateY(200px);
-            transform: rotate(70deg) translateX(-900px) translateY(200px);
+    -webkit-transform: rotate(70deg) translateX(-900px) translateY(500px);
+        -ms-transform: rotate(70deg) translateX(-900px) translateY(500px);
+            transform: rotate(70deg) translateX(-900px) translateY(500px);
     top: -5%;
     box-shadow: 0 0 12px 2px rgba(0, 0, 0, 0.3);
     -webkit-transition: all 1.2s;
             transition: all 1.2s;
     opacity: 1; }
+  .workContainer .hovered {
+    -webkit-transform: rotate(70deg) translateX(-900px) translateY(700px);
+        -ms-transform: rotate(70deg) translateX(-900px) translateY(700px);
+            transform: rotate(70deg) translateX(-900px) translateY(700px); }
+  .workContainer .hoveredBg {
+    -webkit-filter: grayscale(0) blur(0); }
   .workContainer .workText {
     width: 20%;
     font-family: 'Lato', sans-serif;
@@ -392,7 +417,7 @@ header.mainHeader .fullBackground {
     position: absolute;
     top: 0;
     left: 5%;
-    margin: 80px 30px 0; }
+    margin: 5% 30px 0; }
     .workContainer .workText h4 {
       font-size: 4rem;
       font-weight: 800;
@@ -429,6 +454,8 @@ header.mainHeader .fullBackground {
         color: #000;
         text-transform: uppercase;
         font-size: 1.5rem; }
+  .workContainer .mobileBg {
+    display: none; }
 
 /* -------------------------------------------------
   PORTFOLIO OUTRO 
@@ -485,7 +512,8 @@ header.mainHeader .fullBackground {
       color: #E2A800; }
   .blogSection h3 {
     padding: 0 20px;
-    font-weight: 100; }
+    font-weight: 100;
+    background: rgba(255, 255, 255, 0.5); }
 
 .blogPosts {
   width: 100%; }
@@ -607,7 +635,7 @@ footer {
   footer .contact {
     margin: 100px 0; }
   footer button {
-    margin: 20px 0 50px;
+    margin: 20px 0 70px;
     -webkit-appearance: none;
     background-color: transparent;
     border: 2px solid #EAF1F4;
@@ -618,7 +646,7 @@ footer {
     footer button:hover {
       background-color: #EAF1F4; }
     footer button:hover a {
-      color: #4a4a4a; }
+      color: #000; }
     footer button a {
       color: #EAF1F4;
       font-size: 2rem;
@@ -630,7 +658,29 @@ footer {
     letter-spacing: 1.2px;
     color: #EAF1F4; }
   footer .copy {
-    font-size: 1rem; }
+    font-size: 1.5rem; }
+    footer .copy .love {
+      color: #CD5C5C; }
+  footer .socialIcons {
+    list-style: none;
+    width: 20%;
+    margin: 0 auto;
+    padding: 0;
+    display: block; }
+    footer .socialIcons li {
+      padding: 0; }
+    footer .socialIcons li a {
+      color: #EAF1F4;
+      display: inline-block;
+      float: left;
+      width: 33.33%;
+      padding: 10px;
+      -webkit-transition: all 0.3s;
+              transition: all 0.3s; }
+      footer .socialIcons li a:hover {
+        -webkit-transform: scale(1.2);
+            -ms-transform: scale(1.2);
+                transform: scale(1.2); }
 
 /* =============================================================================
                    Navigation
@@ -647,12 +697,12 @@ nav {
   text-transform: uppercase;
   font-size: 2rem;
   font-weight: 100;
-  -webkit-transition: all 0.5s;
-          transition: all 0.5s;
+  -webkit-transition: all 0.7s;
+          transition: all 0.7s;
   z-index: 100; }
   nav ul {
     text-align: center;
-    margin-top: 20%;
+    margin-top: 70px;
     padding: 0; }
     nav ul li {
       display: block;
@@ -662,13 +712,14 @@ nav {
         nav ul li a:hover {
           background-color: #000;
           color: #EAF1F4; }
-  nav .hamburger {
-    position: fixed;
-    right: 2%;
-    top: 2%;
-    font-size: 3rem;
-    color: #a7c4d1;
-    z-index: 100; }
+
+.hamburger {
+  position: fixed;
+  right: 5%;
+  top: 10%;
+  font-size: 3rem;
+  color: #a7c4d1;
+  z-index: 100; }
 
 .slideout {
   left: 0; }
@@ -844,3 +895,31 @@ p.form-allowed-tags, .nocomments {
 
 #respond p, #comments-list ul #respond {
   margin: 0; }
+
+/* --------------------------------
+  MEDIA QUERIES 
+  --------------------------------- */
+@media screen and (max-width: 1000px) {
+  .about .aboutText {
+    padding: 40px 0; }
+  .about p {
+    font-size: 2rem;
+    width: 80%; }
+  .workContainer .workBg:hover ~ .workOverlay {
+    -webkit-transform: rotate(0deg) translateX(0px) translateY(0px);
+        -ms-transform: rotate(0deg) translateX(0px) translateY(0px);
+            transform: rotate(0deg) translateX(0px) translateY(0px); }
+  .workContainer .workOverlay {
+    -webkit-transform: none;
+        -ms-transform: none;
+            transform: none;
+    width: 100%;
+    height: 100%;
+    top: -100%;
+    bottom: 0%;
+    position: relative; }
+  .workContainer .workText {
+    width: 80%;
+    margin: 0 auto;
+    position: absolute;
+    top: 20%; } }

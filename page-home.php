@@ -13,7 +13,8 @@
 
 <!-- NEED TO GET THE 'ABOUT' SECTION -->
 
-    <div class="about" id="about">
+    <div class="about panel clearfix" id="about">
+      <img class="profilePic" src="http:<?php the_field('profile_pic'); ?>" alt="">
       <div class="aboutText">
       <h2>About</h2>
       <?php the_field('about'); ?>
@@ -29,16 +30,18 @@
 
     <?php if( $latestPosts->have_posts()) while( $latestPosts->have_posts()) : $latestPosts->the_post(); ?>
       
-      <div class="workContainer" id="portfolio">
+      <div class="workContainer panel" id="portfolio">
         <div class="workBg" style="background-image:url('<?php the_field('background_image'); ?>')" >
       
         </div><!-- end of .workBg -->
             <div class="workText" >
+            <img class="mobileBg" src="<?php the_field('background_image'); ?>" alt="">
             <h5><?php the_field('project_type'); ?></h5>
             <h4><?php the_title(); ?></h4>
             <p><?php the_field('description'); ?></p>
             <div class="tags">
               <?php the_terms($post->ID, 'skills', ' ', ' ', ' '); ?>
+              <!-- for each -->
             </div>
             <button class="seeItLive" >
               <a href="<?php the_field('view_it_url') ;?>" >View It Live</a>
@@ -49,7 +52,7 @@
 	<?php endwhile; // end custom loop?>
 	<?php wp_reset_postdata(); // return state to normal?>
 
-  <div class="viewGallery" id="blog">
+  <div class="viewGallery panel" id="blog">
     <p>On the Blog...</p>
     <!-- <button>
       <a href="#">View More Here</a>
