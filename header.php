@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
@@ -22,16 +23,24 @@
 <?php if(is_page('home')) { ?>
   <header class="mainHeader">
     <div class="container fullBackground">
-    <div class="hamburger">☰</div>
+    <div class="hamburger">
+      <ul class="hamLines">
+        <li class="line1"></li>
+        <li class="line2"></li>
+        <li class="line3"></li>
+      </ul>
+    </div>
       <nav>
-        <a href="#">
-          <div class="initalCircle small">
-            <h6 class="inital little">J</h6>
-          </div>
-        </a>
-        <?php wp_nav_menu(array(
-              'theme_location' => 'primary',
-            )); ?>
+        <div class="navWrapper">
+          <a href="#">
+            <div class="initalCircle small">
+              <h6 class="inital little">J</h6>
+            </div>
+          </a>
+          <?php wp_nav_menu(array(
+                'theme_location' => 'primary',
+              )); ?>
+        </div><!-- /.navWrapper -->
       </nav>
         <div class="initalCircle">
           <h6 class="inital">J</h6>

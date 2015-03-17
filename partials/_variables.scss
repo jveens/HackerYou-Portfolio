@@ -1,0 +1,20 @@
+/* -------------------------------------------------
+  VARIABLES 
+  -------------------------------------------------- */
+
+  $headerOverlay : rgba(88,100,218,1);
+  $lato : 'Lato', sans-serif;
+  $playfair : 'Playfair Display', serif;
+  $darkest : #000; 
+  $lightest: #EAF1F4;
+  $seethru : rgba(255,255,255,0.5);
+  $shadow : rgba(0,0,0,0.3);
+  $footerBg : rgba(74,74,74,1);
+  $blogLink : #E2A800;
+
+/* -------------------------------------------------
+  MIXINS
+  -------------------------------------------------- */
+ @mixin angleShadow {
+   box-shadow: 0 0 12px 2px $shadow;
+ }

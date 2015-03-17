@@ -2,28 +2,67 @@ $(function() {
 	slideout();
 	// stacking();
 	slideOverlay();
+
 });
+
+
+var showNav = function() {
+	var navWrapper = $('.navWrapper');
+	var isVisible = $('.navWrapper').is(':visible');
+	var hamLines = $('.hamLines');
+	var li = $('.hamLines li')
+	var li1 = $('.line1');
+	var li2 = $('.line2');
+	var li3 = $('.line3');
+
+	setTimeout(function () {
+		if(isVisible) {
+			navWrapper.fadeOut();
+			$(hamLines).css('background-color', 'black');
+			$(li).css('background-color', 'white');
+
+		} else {
+			navWrapper.fadeIn();	
+			$(hamLines).css('background-color', 'transparent');
+			$(li2).css('background-color', 'black');
+		}
+	},400);
+
+	// var changeBurger = function() {
+	// 		if(isVisible) {
+	// 			
+	// 			$(li2).css('background-color', 'white');
+	// 					} else {
+	// 			$(hamLines).css('background-color', 'transparent');
+	// 			$(li1, li3).css('background-color', 'transparent');
+				
+	// 		}
+	// 	};
+}
 
 // Make the nav slideout when the hamburger is clicked
 var slideout = function(){
 	$('.hamburger').on('click', function(){
 		$('nav').toggleClass('slideout');
+		showNav();
 	});
 	$('nav li a').on('click', function(){
 		$('nav').toggleClass('slideout');
+		showNav();
 	});
 	$('.small').on('click', function(){
 		$('nav').toggleClass('slideout');
+		showNav();
 	});
 };
 
 var slideOverlay = function() {
 	$('.seeItLive').on('mouseover', function(){
-		$('.workOverlay').addClass('hovered');
+		$(this).parent().next('.workOverlay').addClass('hovered');
 		$('.workBg').addClass('hoveredBg');
 	});
 	$('.seeItLive').on('mouseout', function(){
-		$('.workOverlay').removeClass('hovered');
+		$(this).parent().next('.workOverlay').removeClass('hovered');
 		$('.workBg').removeClass('hoveredBg');
 	});
 };
