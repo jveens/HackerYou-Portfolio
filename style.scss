@@ -227,14 +227,14 @@ header.mainHeader {
       -webkit-filter: grayscale(0) blur(0);
     }
     &:hover ~ .workOverlay {
-      transform: rotate(70deg) translateX(-900px) translateY(600px);
+      transform: rotate(70deg) translateX(-700px) translateY(850px);
     }
   }
 
   .workOverlay {
     height: 160vh;
     width: 150vw;
-    transform: rotate(70deg) translateX(-900px) translateY(500px);
+    transform: rotate(70deg) translateX(-700px) translateY(700px);
     top: -5%;
     @include angleShadow;
     transition: all 1.2s;
@@ -243,7 +243,7 @@ header.mainHeader {
   }
 
   .hovered {
-      transform: rotate(70deg) translateX(-900px) translateY(600px);
+      transform: rotate(70deg) translateX(-700px) translateY(850px);
   }
   .hoveredBg {
     -webkit-filter: grayscale(0) blur(0);
@@ -905,18 +905,15 @@ p.form-allowed-tags, .nocomments { display:none; }
     .workOverlay {
       transform: none;
       width: 100%;
-      height: 100%;
-      top: -100%;
-      bottom: 0%;
-      position: relative;
+      min-height: 100%;
+      position: absolute;
     }
     .workText {
       width: 100%;
       margin: 0 auto;
-      position: absolute;
       top: 0;
       left: 0;
-      padding: 0 5%;
+      padding: 0 5% 5%;
       text-align: center;
       // bottom: 10%;
       h5 {
