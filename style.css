@@ -261,51 +261,44 @@ header.mainHeader .fullBackground {
         -ms-transform: rotate(-70deg) translateX(600px) translateY(200px);
             transform: rotate(-70deg) translateX(600px) translateY(200px);
     top: -5%; }
-  header.mainHeader .fullBackground .initalCircle.small {
-    width: 100px;
-    height: 100px;
-    right: -46%; }
-    header.mainHeader .fullBackground .initalCircle.small h6.little {
-      font-size: 5rem;
-      top: 10%; }
-  header.mainHeader .fullBackground .initalCircle {
-    background-color: #000;
-    position: relative;
-    display: inline-block;
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-    text-align: center;
-    z-index: 10;
-    margin-top: 10%;
-    right: -45%; }
-    header.mainHeader .fullBackground .initalCircle h6.inital {
-      font-size: 13rem;
-      font-family: 'Playfair Display', serif;
-      position: absolute;
-      display: inline;
-      margin: 0;
-      top: 15%;
-      left: 45%;
-      color: #EAF1F4; }
-  header.mainHeader .fullBackground .headerText {
-    display: inline-block;
-    font-family: 'Lato', sans-serif;
-    font-weight: 400;
+header.mainHeader .initalCircle {
+  background-color: #000;
+  position: relative;
+  display: inline-block;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  text-align: center;
+  z-index: 10;
+  margin-top: 10%;
+  right: -45%; }
+  header.mainHeader .initalCircle h6.inital {
+    font-size: 13rem;
+    font-family: 'Playfair Display', serif;
     position: absolute;
-    z-index: 10;
-    top: 55%;
-    left: 12%; }
-    header.mainHeader .fullBackground .headerText h1, header.mainHeader .fullBackground .headerText h2 {
-      font-size: 5rem;
-      background-color: rgba(255, 255, 255, 0.5);
-      padding: 10px;
-      border-radius: 3px;
-      margin: 20px 0 0; }
-    header.mainHeader .fullBackground .headerText h2 {
-      font-size: 3rem;
-      font-weight: 200;
-      margin-top: 10px; }
+    display: inline;
+    margin: 0;
+    top: 12%;
+    left: 46%;
+    color: #EAF1F4; }
+header.mainHeader .headerText {
+  display: inline-block;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  position: absolute;
+  z-index: 10;
+  top: 55%;
+  left: 12%; }
+  header.mainHeader .headerText h1, header.mainHeader .headerText h2 {
+    font-size: 5rem;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 10px;
+    border-radius: 3px;
+    margin: 20px 0 0; }
+  header.mainHeader .headerText h2 {
+    font-size: 3rem;
+    font-weight: 200;
+    margin-top: 10px; }
 
 .singleHeader {
   background-color: #444;
@@ -685,31 +678,57 @@ footer {
 /* =============================================================================
                    Navigation
    ========================================================================== */
-nav {
+header .initalCircle.small {
+  width: 100px;
+  height: 100px;
+  -webkit-transform: rotate(70deg);
+      -ms-transform: rotate(70deg);
+          transform: rotate(70deg);
+  position: absolute;
+  left: 75%;
+  top: 41.5%;
+  margin: 0;
+  opacity: 0;
+  -webkit-transition: all 0.3s;
+          transition: all 0.3s; }
+  header .initalCircle.small h6.little {
+    font-size: 5rem; }
+header nav {
   background: white;
-  width: 100%;
-  height: 100%;
-  z-index: 20;
+  width: 175%;
+  height: 220%;
+  z-index: 99;
   position: fixed;
-  top: 0;
+  top: 100%;
   left: 100%;
   font-family: 'Lato', sans-serif;
   text-transform: uppercase;
-  font-size: 2rem;
+  font-size: 2.3rem;
   font-weight: 100;
-  -webkit-transition: all 0.7s;
-          transition: all 0.7s;
-  z-index: 100; }
-  nav ul {
+  -webkit-transform: rotate(-70deg);
+      -ms-transform: rotate(-70deg);
+          transform: rotate(-70deg);
+  -webkit-transition: all 1.5s;
+          transition: all 1.5s; }
+  header nav ul {
     text-align: center;
-    margin-top: 70px;
-    padding: 0; }
-    nav ul li {
+    margin-top: 0px;
+    padding: 0;
+    -webkit-transform: rotate(70deg);
+        -ms-transform: rotate(70deg);
+            transform: rotate(70deg);
+    position: absolute;
+    top: 43.5%;
+    left: 63%;
+    opacity: 0;
+    -webkit-transition: all 0.3s;
+            transition: all 0.3s; }
+    header nav ul li {
       display: block;
       margin-bottom: 20px; }
-      nav ul li a {
+      header nav ul li a {
         padding: 4px; }
-        nav ul li a:hover {
+        header nav ul li a:hover {
           background-color: #000;
           color: #EAF1F4; }
 
@@ -722,7 +741,8 @@ nav {
   z-index: 100; }
 
 .slideout {
-  left: 0; }
+  top: 0%;
+  left: -50%; }
 
 /* =============================================================================
                    Comment Styling

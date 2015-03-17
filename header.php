@@ -22,8 +22,8 @@
 <?php if(is_page('home')) { ?>
   <header class="mainHeader">
     <div class="container fullBackground">
+    <div class="hamburger">☰</div>
       <nav>
-        <div class="hamburger">☰</div>
         <a href="#">
           <div class="initalCircle small">
             <h6 class="inital little">J</h6>
