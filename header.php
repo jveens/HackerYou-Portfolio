@@ -12,6 +12,7 @@
   <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic|Playfair+Display:400,700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   <link rel="stylesheet" type="text/css" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
+  <link rel="icon" type="image/png" sizes="96x96" href="img/favicon-96x96.png">
 
   <?php wp_head(); ?>
 </head>
@@ -55,7 +56,13 @@
 <?php } else { ?>
   <header class="singleHeader">
     <div class="container">
-    <div class="hamburger">☰</div>
+    <div class="hamburger">
+          <ul class="hamLines">
+            <li class="line1"></li>
+            <li class="line2"></li>
+            <li class="line3"></li>
+          </ul>
+    </div>
       <nav>
         <a href="http://localhost:3000/portfolio/">
           <div class="initalCircle small">

@@ -3,12 +3,12 @@
   	  <section class="contact" id="contact">
   	    <p>I'd love to join your team!</p>
   	    <button>
-  	      <a href="#">Say Hello</a>
+  	      <a href="mailto:jennyveens@gmail.com">Say Hello</a>
   	    </button>
         <ul class="socialIcons clearfix">
-          <li><a href="http://ca.linkedin.com/in/jennyveens"><i class="fa fa-linkedin fa-4x"></i></a></li>
-          <li><a href="http://github.com/jveens"><i class="fa fa-github-alt fa-4x"></i></a></li>
-          <li><a href="http://twitter.com/jennyveens"><i class="fa fa-twitter fa-4x"></i></a></li>
+          <li><a href="http://ca.linkedin.com/in/jennyveens" target="_blank"><i class="fa fa-linkedin fa-4x"></i></a></li>
+          <li><a href="http://github.com/jveens" target="_blank"><i class="fa fa-github-alt fa-4x"></i></a></li>
+          <li><a href="http://twitter.com/jennyveens" target="_blank"><i class="fa fa-twitter fa-4x"></i></a></li>
         </ul>
   	  </section>
 

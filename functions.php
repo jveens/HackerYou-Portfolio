@@ -193,7 +193,7 @@ function hackeryou_posted_on() {
 			esc_attr( get_the_time() ),
 			get_the_date()
 		),
-		sprintf( '<span class="author vcard"><a class="url fn n" href="%1$s" title="%2$s">%3$s</a></span>',
+		sprintf( '<span class="author vcard"><a class="url fn n" href="http://jennyveens.com/#about" title="%2$s">%3$s</a></span>',
 			get_author_posts_url( get_the_author_meta( 'ID' ) ),
 			sprintf( esc_attr( 'View all posts by %s'), get_the_author() ),
 			get_the_author()

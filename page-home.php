@@ -13,14 +13,16 @@
 
 <!-- NEED TO GET THE 'ABOUT' SECTION -->
 
-    <div class="about panel clearfix" id="about">
-      <img class="profilePic" src="http:<?php the_field('profile_pic'); ?>" alt="">
+    <div class="about clearfix" id="about">
+      <img class="profilePic" src="<?php the_field('profile_pic'); ?>" alt="A photo of me smiling.">
       <div class="aboutText">
       <h2>About</h2>
       <?php the_field('about'); ?>
       </div>
     </div>
-
+    <div class="viewGallery" id="portfolio">
+      <p>Recent Work</p>
+    </div>
     <?php  // we are going to pull in our latest 4 blog posts ?> 
     <?php  $latestPosts = new WP_Query( array(
     	'post_type' => 'portfolio', 
@@ -30,21 +32,35 @@
 
     <?php if( $latestPosts->have_posts()) while( $latestPosts->have_posts()) : $latestPosts->the_post(); ?>
       
-      <div class="workContainer panel" id="portfolio">
-        <div class="workBg" style="background-image:url('<?php the_field('background_image'); ?>')" >
-      
-        </div><!-- end of .workBg -->
+      <div class="workContainer">
+        <a class="workLink" href="<?php the_field('view_it_url') ;?>">
+          <div class="workBg" style="background-image:url('<?php the_field('background_image'); ?>')" >
+          </div><!-- end of .workBg -->
+        </a>
             <div class="workText" >
-            <img class="mobileBg" src="<?php the_field('background_image'); ?>" alt="">
+            <a href="<?php the_field('view_it_url') ;?>" target="_blank">
+              <img class="mobileBg" src="<?php the_field('background_image'); ?>" alt="">
+            </a>
             <h5><?php the_field('project_type'); ?></h5>
             <h4><?php the_title(); ?></h4>
             <p><?php the_field('description'); ?></p>
             <div class="tags">
-              <?php the_terms($post->ID, 'skills', ' ', ' ', ' '); ?>
+            <ul class="taxonomyList">
+                        <?php $taxonomyItems = get_the_terms($post->ID, 'skills', '', ',', '');
+
+                        //performs one time for each taxonomy item
+                        foreach ($taxonomyItems as $taxonomyItem) {
+
+
+                          // prints the taxonomy name (e.g jQuery) within an anchor tag that links to the url defined above it is all wrapped in a list item
+                          echo '<li>'.$taxonomyItem->name.'</li>';
+                         };
+                        ?>
+                    </ul>
               <!-- for each -->
             </div>
             <button class="seeItLive" >
-              <a href="<?php the_field('view_it_url') ;?>" >View It Live</a>
+              <a href="<?php the_field('view_it_url') ;?>" target="_blank">View It Live</a>
             </button>
           </div> <!-- end of .workText -->
           <div class="workOverlay" style="background-color:<?php the_field('overlay_color'); ?>"></div>
@@ -52,11 +68,8 @@
 	<?php endwhile; // end custom loop?>
 	<?php wp_reset_postdata(); // return state to normal?>
 
-  <div class="viewGallery panel" id="blog">
+  <div class="viewGallery" id="blog">
     <p>On the Blog...</p>
-    <!-- <button>
-      <a href="#">View More Here</a>
-    </button> -->
   </div>
   <!-- BLOG SECTION --> 
   <section class="blogSection">
@@ -81,7 +94,7 @@
               <div class="textContainer">
                 <h3><?php echo get_the_title( $post->ID ); ?></h3>
               </div>
-              <div class="blogOverlay"></div>
+              <div class="blogOverlay" style="background-color:<?php the_field('overlay_color'); ?>"></div>
             </a>
         </div>
         

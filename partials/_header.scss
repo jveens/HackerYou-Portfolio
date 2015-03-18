@@ -1,0 +1,126 @@
+
+@mixin largeCircle {
+  background-color: $darkest;
+  position: relative;
+  display: inline-block;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  text-align: center;
+  z-index: 10;
+  margin-top: 7%;
+  right: -45%;
+}
+
+/* -------------------------------------------------
+  HEADER
+  -------------------------------------------------- */
+
+header.mainHeader {
+  .fullBackground {
+    background-image: url('img/797.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+
+    .overlay.angle {
+      height: 160vh;
+      width: 150vw;
+      background-color: $headerOverlay;
+      transform: rotate(108deg) translateX(-400px) translateY(0);
+      top: -5%;
+      @include angleShadow;
+    } // end of .overlay.angle
+  
+  }
+  .initalCircle {
+    @include largeCircle;
+
+      h6.inital {
+      font-size: 13rem;
+      font-family: $playfair;
+      position: absolute;
+      display: inline;
+      margin: 0;
+      top: 12%;
+      left: 46%;
+      color: $lightest;
+      } // end of h6.inital
+    } // end of .initalCircle
+
+    .headerText {
+      display: inline-block;
+      font-family: $lato;
+      font-weight: 400;
+      position: absolute;
+      z-index: 10;
+      top: 65%;
+      left: 45%;
+
+      h1,
+      h2 {
+        font-size: 5rem;
+        padding: 7px;
+        border-radius: 3px;
+        margin: 20px 0 0;
+        color: white;
+      }
+      h2 {
+        font-size: 3rem;
+        font-weight: 200;
+        margin-top: -5px;
+      }
+    }
+}// end of header
+
+.singleHeader {
+  background-color: #444;
+  color: black;
+  padding: 2%;
+  }
+
+  .initalCircle {
+    background-color: black;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    position: relative;
+    padding: 2%;
+
+    .inital {
+      color: white;
+      font-family: $playfair;
+      text-align: center;
+      position: absolute;
+      display: inline;
+      top: 12%;
+      left: 42%;
+      font-size: 3rem;
+      margin: 0;
+    }
+  }
+
+  .headerTitle,
+  .entry-meta {
+    font-size: 4.2rem;
+    font-family: $lato;
+    font-weight: 200;
+    color: white;
+    letter-spacing: 1.2px;
+    text-align: center;
+    width: 50%;
+    margin: 5% auto 60px;
+  }
+
+  .entry-meta {
+    font-size: 1.7rem;
+    font-weight: 100;
+    margin-top: 20px;
+
+    a {
+      color: white;
+    }
+  }
